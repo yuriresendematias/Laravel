@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Curso de Laravel <?php echo $x?>
                 </div>
 
                 <div class="links">
