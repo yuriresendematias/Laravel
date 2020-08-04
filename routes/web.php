@@ -1,8 +1,8 @@
 <?php
 
-Route::any('products/search', 'ProductController@search')->name('products.search');
+Route::any('products/search', 'ProductController@search')->name('products.search')->middleware('auth');
 //já substitui todas as rotas comentadas a baixo (faz o CRUD completo)
-Route::resource('products', 'ProductController'); 
+Route::resource('products', 'ProductController')->middleware('auth'); 
 /*
 Route::get ('products/create', 'ProductController@create')->name('products.create');
 Route::get ('products/{id}', 'ProductController@show')->name('products.show');
@@ -113,3 +113,4 @@ Route::group([
 );
 
 */
+Auth::routes(['register' => false]);
